@@ -1,0 +1,602 @@
+/* Body */
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* KEYFRAMES */
+@keyframes jump {
+  50% { bottom: 1vh; }
+  100% { bottom: -4vh; }
+}
+@keyframes trade_cow {
+  100% { transform: translate(13vw); }
+}
+@keyframes trade_bean {
+  100% { transform: translate(-21vw); }
+}
+@keyframes plant {
+  100% { transform: translate(15vw,5vh); }
+  100% { opacity: 0; }
+}
+@keyframes grow {
+  100% { opacity: 1; }
+}
+@keyframes appear {
+  100% { opacity: 1; }
+}
+@keyframes climb {
+  0% { bottom: -4vh; }
+  15% { bottom: 10vh; }
+  30% { bottom: 30vh; }
+  45% { bottom: 50vh; }
+  60% { bottom: 70vh; }
+  75% { bottom: 90vh; }
+  90% { bottom: 110vh; }
+  100% { bottom: 120vh; }
+}
+@keyframes move_gold_giant {
+  100% { transform: translate(65vw); }
+}
+@keyframes steal_object {
+  50% { bottom: 0vh; }
+  100% { transform: translate(-116vw); }
+}
+@keyframes steal_jack {
+  50% { transform: translate(116vw) }
+  100% { transform: translate(-116vw) }
+}
+@keyframes fall_beanstalk {
+  100% { transform: translate(0,vh);
+    transform: rotate(90deg);
+    transform-origin: 80% 80%; 
+  }
+}
+@keyframes fall_giant {
+  0%   { transform: translate(0px, 0px) rotate(0deg); }
+  25%  { transform: translate(5vw, 20vh) rotate(22.5deg); }
+  50%  { transform: translate(15vw, 40vh) rotate(45deg); }
+  75%  { transform: translate(25vw, 60vh) rotate(67.5deg); }
+  100% { transform: translate(35vw, 80vh) rotate(90deg); }
+}
+
+/* BUTTON (NEXT) */
+#button-next-index {
+  display: inline-block;
+  padding: 6px 12px;
+  position: absolute;
+  top: 52%;
+  right: 23%;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+#button-next-index:hover {
+    background-color: #45a049;
+}
+#button-next {
+  display: inline-block;
+  padding: 6px 12px;
+  position: absolute;
+  top: 23%;
+  left: 25%;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+#button-next:hover {
+    background-color: #45a049;
+}
+/* BUTTON (BACK) */
+#button-back {
+  display: inline-block;
+  padding: 6px 12px;
+  position: absolute;
+  top: 23%;
+  left: 15%;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+#button-back:hover {
+    background-color: #45a049;
+}
+#button-back-end {
+  display: inline-block;
+  padding: 6px 12px;
+  position: absolute;
+  top: 52%;
+  right: 23%;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+#button-back-end:hover {
+    background-color: #45a049;
+}
+
+/* INDEX PAGE */
+body.index {
+  background-image: url("background1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#title {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 4rem;
+  width: 60vw;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: gold;
+  background-image: url("wood_plank.png");
+  background-size: cover;
+}
+
+/* FIRST PAGE */
+body.jack_and_the_beanstalk1 {
+  background-image: url("background2.jpg");
+  background-size: cover;
+}
+#text1 {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 1.25rem;
+  width: 40vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  position: absolute;
+  color: gold; /*change color*/
+  text-shadow: #000000 2px 2px 4px;
+  background-image: url("wood_plank.png");
+  background-size: cover;
+}
+
+/* SECOND PAGE */
+body.jack_and_the_beanstalk2 {
+  background-image: url("background2.jpg");
+  background-size: cover;
+}
+#text2 {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 1.25rem;
+  width: 40vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  text-shadow: 2px 2px 4px #000000;
+  position: absolute;
+  color: gold;
+  background-image: url("wood_plank.png");
+  background-size: cover;
+}
+#yay {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 1rem;
+  width: 3vw;
+  height: 3vh;
+  padding: 10px;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+  position: absolute;
+  background-color: white;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+  bottom: 26.5vh;
+  left: 28vw;
+  opacity: 0;
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+}
+
+/* THIRD PAGE */
+body.jack_and_the_beanstalk3 {
+  background-image: url("background2.jpg");
+  background-size: cover;
+}
+#text3 {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 1.25rem;
+  width: 40vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  text-shadow: 2px 2px 4px #000000;
+  position: absolute;
+  color: gold;
+  background-image: url("wood_plank.png");
+  background-size: cover;
+}
+
+/* FOURTH PAGE */
+body.jack_and_the_beanstalk4 {
+  background-image: url("background3.jpg");
+  background-size: cover;
+}
+#text4 {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 1.25rem;
+  width: 40vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  text-shadow: 2px 2px 4px #000000;
+  position: absolute;
+  color: gold;
+  background-image: url("wood_plank.png");
+  background-size: cover;
+}
+
+/* FIFTH PAGE */
+body.jack_and_the_beanstalk5 {
+  background-image: url("background3.jpg");
+  background-size: cover;
+}
+#text5 {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 1.25rem;
+  width: 40vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  text-shadow: 2px 2px 4px #000000;
+  position: absolute;
+  color: gold;
+  background-image: url("wood_plank.png");
+  background-size: cover;
+}
+
+/* SIXTH PAGE */
+body.jack_and_the_beanstalk6 {
+  background-image: url("background2.jpg");
+  background-size: cover;
+}
+#text6 {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 1.25rem;
+  width: 40vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  text-shadow: 2px 2px 4px #000000;
+  position: absolute;
+  color: gold;
+  background-image: url("wood_plank.png");
+  background-size: cover;
+}
+
+/* ENDING */
+body.ending {
+  background-image: url("background1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#end {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 4rem;
+  width: 60vw;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: gold;
+  background-image: url("wood_plank.png");
+  background-size: cover;
+}
+
+/* Jack */
+#jack_index {
+  width: 15vw;
+  height: 30vh;
+  background-image: url("jack.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -4vh;
+  left: 20vw;
+  animation-name: jump;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+#jack1 {
+  width: 15vw;
+  height: 30vh;
+  background-image: url("jack.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -4vh;
+  left: 30vw;
+}
+#jack2 {
+  width: 15vw;
+  height: 30vh;
+  background-image: url("jack.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -4vh;
+  left: 30vw;
+  animation-name: jump;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 6s
+}
+#jack3 {
+  width: 15vw;
+  height: 30vh;
+  background-image: url("jack.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -4vh;
+  left: 50vw;
+  z-index: 1;
+  animation-name: climb;
+  animation-duration: 8s;
+  animation-fill-mode: forwards;
+}
+#jack4 {
+  width: 15vw;
+  height: 30vh;
+  background-image: url("jack.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -4vh;
+  left: -10vw;
+  animation-name: steal_jack;
+  animation-duration: 10s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
+#jack5 {
+  width: 15vw;
+  height: 30vh;
+  background-image: url("jack.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -4vh;
+  left: -10vw;
+  animation-name: steal_jack;
+  animation-duration: 10s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
+#jack6 {
+  width: 15vw;
+  height: 30vh;
+  background-image: url("jack_axe.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0vh;
+  left: 32vw;
+}
+
+/* COW */
+#cow_index {
+  width: 20vw;
+  height: 20vh;
+  background-image: url("cow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -2vh;
+  left: 30vw;
+}
+#cow1 {
+  width: 20vw;
+  height: 20vh;
+  background-image: url("cow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -2vh;
+  left: 36vw;
+  animation-name: trade_cow;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+/* MERCHANT */
+#merchant1 {
+  width: 20vw;
+  height: 25vh;
+  background-image: url("merchant.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -1vh;
+  right: 25vw;
+}
+
+/* BEAN */
+#bean1 {
+  width: 5vw;
+  height: 5vh;
+  background-image: url("bean.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 7vh;
+  right: 38vw;
+  animation-name: trade_bean;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+#bean2 {
+  width: 5vw;
+  height: 5vh;
+  background-image: url("bean.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 4vh;
+  left: 35vw;
+  animation-name: plant;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+/* BEANSTALK */
+#bean_stalk2 {
+  width: 60vw;
+  height: 120vh;
+  background-image: url("beanstalk.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -20vh;
+  left: 30vw;
+  opacity: 0;
+  animation-name: grow;
+  animation-delay: 3s;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+#bean_stalk3 {
+  width: 60vw;
+  height: 120vh;
+  background-image: url("beanstalk.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -20vh;
+  left: 30vw;
+}
+#beanstalk6 {
+  width: 60vw;
+  height: 120vh;
+  background-image: url("beanstalk.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -20vh;
+  left: 30vw;
+  animation-name: fall_beanstalk;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+/* GIANT */
+#giant4 {
+  width: 35vw;
+  height: 60vh;
+  background-image: url("giant.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0vh;
+  right: 30vw;
+  animation-name: move_gold_giant;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+#giant5 {
+  width: 35vw;
+  height: 60vh;
+  background-image: url("giant.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0vh;
+  right: 30vw;
+  animation-name: move_gold_giant;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+#giant6 {
+  width: 35vw;
+  height: 60vh;
+  background-image: url("giant.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 40vh;
+  right: 10vw;
+  z-index: 1;
+  animation-name: fall_giant;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+/* GOLD */
+#gold4 {
+  width: 10vw;
+  height: 10vh;
+  background-image: url("gold.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 13vh;
+  right: 43vw;
+  animation: move_gold_giant 4s forwards, steal_object 4.1s 9s forwards;
+}
+
+/* HEN */
+#hen5 {
+  width: 10vw;
+  height: 10vh;
+  background-image: url("hen.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 13vh;
+  right: 43vw;
+  animation: move_gold_giant 4s forwards, steal_object 4.1s 9s forwards;
+}
